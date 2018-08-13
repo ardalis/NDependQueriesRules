@@ -1,17 +1,17 @@
-// <Name>Aggregate Project Complexity</Name>
+// <Name>Aggregate Project Complexity (APC)</Name>
 from a in JustMyCode.Assemblies
 
-let aggregateCC = a.ChildTypes.ChildMethods().Sum(m => m.CyclomaticComplexity / 10)
+let APC = a.ChildTypes.ChildMethods().Sum(m => m.CyclomaticComplexity / 10)
 let rawCC = a.ChildTypes.ChildMethods().Sum(m => m.CyclomaticComplexity)
 
 // optional optimization if not comparing rawCC
-// where aggregateCC >= 10
+// where APC >= 10
 
-orderby aggregateCC descending 
-select new { a, aggregateCC, rawCC }
+orderby APC descending 
+select new { a, APC, rawCC }
 
 // <Description>
-// **Aggregate Project Complexity** sums up method complexity using a point system where complexity levels of 1-9
+// **Aggregate Project Complexity (APC)** sums up method complexity using a point system where complexity levels of 1-9
 // are 0 points, 10-19 are 1 point, 20-29 are 2 points, etc. Projects that only have classes with methods with 
 // less than 10 cyclomatic complexity will have an APC score of 0. Higher scores represent legitimate complexity
 // within projects/assemblies, not just the presence of many single-path methods or properties on the contained types.
