@@ -1,0 +1,19 @@
+// <Name>Aggregate Type Complexity</Name>
+from t in Application.Types
+
+let aggregateTypeCC = t.MethodsAndContructors.Sum(m => m.CyclomaticComplexity / 10)
+let rawCC = t.MethodsAndContructors.Sum(m => m.CyclomaticComplexity)
+
+// optional optimization if not comparing rawCC
+// where aggregateCC >= 10
+
+orderby aggregateTypeCC descending 
+select new { t, aggregateTypeCC, rawCC }
+
+// <Description>
+// **Aggregate Type Complexity** sums up method complexity using a point system where complexity levels of 1-9
+// are 0 points, 10-19 are 1 point, 20-29 are 2 points, etc. Types that only have methods with less than 10
+// complexity will have an ATC score of 0. Higher scores represent legitimate complexity within types, not just
+// the presence of many single-path methods or properties.
+// </Description>
+
