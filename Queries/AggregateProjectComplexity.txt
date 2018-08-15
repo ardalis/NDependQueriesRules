@@ -5,7 +5,7 @@ let APC = a.ChildTypes.ChildMethods().Sum(m => m.CyclomaticComplexity / 10)
 let rawCC = a.ChildTypes.ChildMethods().Sum(m => m.CyclomaticComplexity)
 
 // optional optimization if not comparing rawCC
-// where APC >= 10
+// where rawCC >= 10
 
 orderby APC descending 
 select new { a, APC, rawCC }
@@ -15,6 +15,8 @@ select new { a, APC, rawCC }
 // are 0 points, 10-19 are 1 point, 20-29 are 2 points, etc. Projects that only have classes with methods with 
 // less than 10 cyclomatic complexity will have an APC score of 0. Higher scores represent legitimate complexity
 // within projects/assemblies, not just the presence of many single-path methods or properties on the contained types.
+// https://ardalis.com/measuring-aggregate-complexity-in-software-applications
+// https://github.com/ardalis/NDependQueriesRules
 // </Description>
 
 

@@ -5,7 +5,7 @@ let ATC = t.MethodsAndContructors.Sum(m => m.CyclomaticComplexity / 10)
 let rawCC = t.MethodsAndContructors.Sum(m => m.CyclomaticComplexity)
 
 // optional optimization if not comparing rawCC
-// where ATC >= 10
+// where rawCC >= 10
 
 orderby ATC descending 
 select new { t, ATC, rawCC }
@@ -15,5 +15,7 @@ select new { t, ATC, rawCC }
 // are 0 points, 10-19 are 1 point, 20-29 are 2 points, etc. Types that only have methods with less than 10
 // complexity will have an ATC score of 0. Higher scores represent legitimate complexity within types, not just
 // the presence of many single-path methods or properties.
+// https://ardalis.com/measuring-aggregate-complexity-in-software-applications
+// https://github.com/ardalis/NDependQueriesRules
 // </Description>
 
