@@ -9,7 +9,25 @@ Learn more about Aggregate Type Complexity and Aggregate Project Complexity here
 
 ## Example Results from Open Source Projects
 
-### AutoMapper ()
+### AutoMapper
+https://github.com/AutoMapper/AutoMapper
+
+#### Aggregate Project Complexity
+
+| Project  | APC | Sum of CC |
+| -------- | ---: | ---: |
+| AutoMapper | 27 | 2333 |
+
+#### Aggregate Type Complexity
+
+| Type  | ATC | Sum of CC |
+| ----- | ---: | ---:|
+| TypeMapPlanBuilder | 5 | 126 | 
+| TypeMap | 4 | 150 | 
+| ProfileMap | 3 | 96 | 
+| TypeDetails | 3 | 78 | 
+| MapperConfiguration | 2 | 106 | 
+| MappingExpression<TSource,TDestination> | 2 | 121 | 
 
 ### AspNetBoilerPlate
 https://github.com/aspnetboilerplate/aspnetboilerplate
@@ -31,4 +49,7 @@ https://github.com/aspnetboilerplate/aspnetboilerplate
 | EmailExtensions | 3 | 45 |
 | AbpDbContext | 2 | 105 |
 
+### Suggest Another Sample
+
+Suggest a new (easily built from source) project to analyze by submitting an issue, or send a PR with your own data built from rules hosted here.
 
