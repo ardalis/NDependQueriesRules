@@ -22,7 +22,7 @@ https://github.com/AutoMapper/AutoMapper
 
 | Type  | ATC | Sum of CC |
 | ----- | ---: | ---:|
-| TypeMapPlanBuilder | 5 | 126 | 
+| [TypeMapPlanBuilder](https://github.com/AutoMapper/AutoMapper/blob/master/src/AutoMapper/Execution/TypeMapPlanBuilder.cs) | 5 | 126 | 
 | TypeMap | 4 | 150 | 
 | ProfileMap | 3 | 96 | 
 | TypeDetails | 3 | 78 | 
